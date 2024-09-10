@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <random>
 #include <ctime>
-#include <bits/stdc++.h> // Incluye muchas bibliotecas estándar (no recomendado en código de producción)
+#include <bits/stdc++.h> 
 using namespace std;
 
 // Función para particionar el arreglo y elegir el pivote
