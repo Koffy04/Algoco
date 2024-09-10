@@ -10,12 +10,12 @@ int main() {
     ofstream file;
     file.open("prueba2_ordenada.txt");
 
-    // Configurar generador de números aleatorios
+    // Configurar generador de random
     unsigned seed = static_cast<unsigned>(time(0));
     mt19937 g(seed);
     uniform_int_distribution<> distrib(10000, 1000000);
 
-    // Generar un número aleatorio entre 10,000 y 10^8
+    // Generar un número aleatorio entre el rango que desee el ayudante
     int valor = distrib(g);
     cout << "Número generado: " << valor << endl;
 
@@ -28,7 +28,7 @@ int main() {
     for (int i = 0; i < valor; i++)
         file << lista[i] << endl;
 
-    // Liberar la memoria asignada dinámicamente
+    // la diferencia es que antes no hay un shuffle
     delete[] lista;
 
     file.close();
