@@ -53,7 +53,7 @@ int main() {
     file.close(); // Cerrar el archivo después de leer
 
     auto inicio = chrono::high_resolution_clock::now();
-    quickSort(vec, 0, N - 1); // Ordenar el vector usando Quick Sort
+    quickSort(vec, 0, N/2); // Ordenar el vector usando Quick Sort
     
     for (int i = 0; i < N; i++) {
         file2 << vec[i] << endl; // Escribir los números ordenados en el archivo de salida
