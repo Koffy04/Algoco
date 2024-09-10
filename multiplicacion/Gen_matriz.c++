@@ -6,21 +6,21 @@
 using namespace std;
 int main() {
     int filas = 950;
-    int columnas = 950;
-    string nombreArchivo = "matriz3.txt";
-    int filas2 = 950;
+    int columnas = 950; //tamaño  matriz
+    string nombreArchivo = "matriz3.txt"; //la salida ta aqui
+    int filas2 = 950; //tamaño matriz 2
     int columnas2 = 950;
     ofstream archivo(nombreArchivo);
     if (!archivo.is_open()) {
         std::cerr << "Error al abrir el archivo." << std::endl;
     }
 
-    srand(std::time(nullptr)); // Inicializa la semilla de números aleatorios
+    srand(std::time(nullptr)); // Inicializa los números aleatorios
     archivo << filas << endl;
     archivo << columnas << endl;
     for (int i = 0; i < filas; ++i) {
         for (int j = 0; j < columnas; ++j) {
-            int numeroAleatorio = std::rand() % 100; // Genera un número aleatorio entre 0 y 99
+            int numeroAleatorio = rand() % 100; // Genera un número aleatorio entre 0 y 99
             archivo << numeroAleatorio;
             if (j < columnas - 1) {
                 archivo << " ";
